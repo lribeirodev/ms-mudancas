@@ -134,7 +134,7 @@ label{
     height: 100%;
     width: 100%;
     filter: grayscale(90%);
-    background-image: url(/static_files/images/background-images/truck-behind.jpg);
+    background-image: url('./static_files/images/background-images/truck-behind.jpg');
     background-position: bottom;
     background-size: cover;
 }
