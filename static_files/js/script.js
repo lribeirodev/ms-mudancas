@@ -70,7 +70,9 @@ function eventCepOrigem(){
                 }else{
                     CEP_ORIGEM.style.backgroundColor = '#FFFFFF';
                     document.forms[0].elements['UF_ORIGEM'].value = data.uf;
+                    document.forms[0].elements['MUNICIPIO_ORIGEM'].value = data.localidade;
                     document.forms[0].elements['LOGRADOURO_ORIGEM'].value = data.logradouro;
+                    document.forms[0].elements['BAIRRO_ORIGEM'].value = data.bairro;
                     document.getElementById('NUMERO_ORIGEM').focus();
                 }
             }).catch((error) =>{
@@ -91,7 +93,9 @@ function eventCepDestino(){
             }else{
                 CEP_DESTINO.style.backgroundColor = '#FFFFFF';
                 document.forms[0].elements['UF_DESTINO'].value = data.uf;
+                document.forms[0].elements['MUNICIPIO_DESTINO'].value = data.localidade;
                 document.forms[0].elements['LOGRADOURO_DESTINO'].value = data.logradouro;
+                document.forms[0].elements['BAIRRO_DESTINO'].value = data.bairro;
                 document.getElementById('NUMERO_DESTINO').focus();
             }
         }).catch((error) =>{
@@ -114,19 +118,23 @@ function sendMessageText(){
         origem : {
             cep : form.elements['CEP_ORIGEM'].value,
             uf : form.elements['UF_ORIGEM'].value,
+            municipio : form.elements['MUNICIPIO_ORIGEM'].value,
             logradouro : form.elements['LOGRADOURO_ORIGEM'].value,
+            bairro : form.elements['BAIRRO_ORIGEM'].value,
             numero : form.elements['NUMERO_ORIGEM'].value,
         },
         destino : {
             cep : form.elements['CEP_DESTINO'].value,
             uf : form.elements['UF_DESTINO'].value,
+            municipio : form.elements['MUNICIPIO_DESTINO'].value,
             logradouro : form.elements['LOGRADOURO_DESTINO'].value,
+            bairro : form.elements['BAIRRO_DESTINO'].value,
             numero : form.elements['NUMERO_DESTINO'].value,
         },
         observacao : form.elements['OBS'].value
     };
 
-    window.open(`https://wa.me/55${PHONE_NUMBER}?text=Olá estou enviando um pedido de orçamento, segue os meus dados abaixo${'%0a*NOME:* '+message.nome+'%0a*TELEFONE:* '+message.telefone+'%0a*TIPO SERVIÇO:* '+message.servico+'%0a%0a*CEP ORIGEM:* '+message.origem.cep+'%0a*UF:* '+message.origem.uf+'%0a*LOGRADOURO:* '+message.origem.logradouro+'%0a*NÚMERO:* '+message.origem.numero+'%0a%0a*CEP DESTINO:* '+message.destino.cep+'%0a*UF:* '+message.destino.uf+'%0a*LOGRADOURO:* '+message.destino.logradouro+'%0a*NÚMERO:* '+message.destino.numero+'%0a%0a*OBSERVAÇÃO:*%0a'+message.observacao}`)
+    window.open(`https://wa.me/55${PHONE_NUMBER}?text=Olá estou enviando um pedido de orçamento, segue os meus dados abaixo${'%0a*NOME:* '+message.nome+'%0a*TELEFONE:* '+message.telefone+'%0a*TIPO SERVIÇO:* '+message.servico+'%0a%0a*CEP ORIGEM:* '+message.origem.cep+'%0a*UF:* '+message.origem.uf+'%0a*MUNICÍPIO:* '+message.origem.municipio+'%0a*LOGRADOURO:* '+message.origem.logradouro+'%0a*BAIRRO:* '+message.origem.bairro+'%0a*NÚMERO:* '+message.origem.numero+'%0a%0a*CEP DESTINO:* '+message.destino.cep+'%0a*UF:* '+message.destino.uf+'%0a*MUNICÍPIO:* '+message.destino.municipio+'%0a*LOGRADOURO:* '+message.destino.logradouro+'%0a*BAIRRO:* '+message.destino.bairro+'%0a*NÚMERO:* '+message.destino.numero+'%0a%0a*OBSERVAÇÃO:*%0a'+message.observacao}`)
 }
 
 initServiceSection();
