@@ -18,7 +18,7 @@ const ourValuesWrapperItems = [
 ];
 const CEP_ORIGEM = document.getElementById('CEP_ORIGEM');
 const CEP_DESTINO = document.getElementById('CEP_DESTINO');
-const PHONE_NUMBER = '1197103-3978';
+const PHONE_NUMBER = '11971033978';
 
 function initServiceSection(){
     let ourValuesWrapper = document.getElementsByClassName('our-values-container')[0];
