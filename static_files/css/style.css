@@ -43,6 +43,8 @@ label{
     font-size: 30px;
 }
 
+
+
 .secondLine{
     margin-top: 30px;
 }
@@ -395,6 +397,7 @@ label{
 
     select{
         width: 94% !important;
+        background-color: #ffffff;
     }
     textarea{
         width: 90% !important;
