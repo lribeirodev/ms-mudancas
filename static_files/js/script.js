@@ -108,6 +108,10 @@ function sendMessage(){
     window.open(`https://wa.me/55${PHONE_NUMBER}`);
 }
 
+function tagManager() {
+    return window['dataLayer'];
+}
+
 function sendMessageText(){
     
     let form = document.forms[0];
@@ -133,6 +137,12 @@ function sendMessageText(){
         },
         observacao : form.elements['OBS'].value
     };
+
+    tagManager().push({
+        event_name : "button",
+        event_type: "click",
+        event_value: "fazer-orçamento",
+    });
 
     window.open(`https://wa.me/55${PHONE_NUMBER}?text=Olá estou enviando um pedido de orçamento, segue os meus dados abaixo${'%0a*NOME:* '+message.nome+'%0a*TELEFONE:* '+message.telefone+'%0a*TIPO SERVIÇO:* '+message.servico+'%0a%0a*CEP ORIGEM:* '+message.origem.cep+'%0a*UF:* '+message.origem.uf+'%0a*MUNICÍPIO:* '+message.origem.municipio+'%0a*LOGRADOURO:* '+message.origem.logradouro+'%0a*BAIRRO:* '+message.origem.bairro+'%0a*NÚMERO:* '+message.origem.numero+'%0a%0a*CEP DESTINO:* '+message.destino.cep+'%0a*UF:* '+message.destino.uf+'%0a*MUNICÍPIO:* '+message.destino.municipio+'%0a*LOGRADOURO:* '+message.destino.logradouro+'%0a*BAIRRO:* '+message.destino.bairro+'%0a*NÚMERO:* '+message.destino.numero+'%0a%0a*OBSERVAÇÃO:*%0a'+message.observacao}`)
 }
