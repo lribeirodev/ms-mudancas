@@ -139,7 +139,7 @@ function sendMessageText(){
     };
 
     tagManager().push({
-        event_name : "button",
+        event : "button_contact",
         event_type: "click",
         event_value: "fazer-orçamento",
     });
