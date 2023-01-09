@@ -4,24 +4,16 @@
     @Author: Lucas Ribeiro
 -->
 <head>
-    
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KF8FXXT');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KF8FXXT');</script>
     <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLP7RZETE3"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-ZLP7RZETE3');
-    </script>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,20 +23,15 @@
     <link rel="icon" type="image/x-icon" href="./static_files/images/logo.ico">
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF8FXXT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <header>
         <div class="logo-wrapper">
             <img class="logo" src="./static_files/images/logo.png">
         </div>
         <div class="menu-container">
             <ul class="menu-wrapper">
-                <li class="menu-item" onclick="openServico();">Serviços</li>
-                <li class="menu-item" onclick="openSobre();">Sobre</li>
-                <li class="menu-item" onclick="openOrcamento();">Orçamento</li>
+                <li class="menu-item" data-gtm-menu-option="menu-serviços" onclick="openServico();">Serviços</li>
+                <li class="menu-item" data-gtm-menu-option="menu-sobres" onclick="openSobre();">Sobre</li>
+                <li class="menu-item" data-gtm-menu-option="menu-orçamento" onclick="openOrcamento();">Orçamento</li>
             </ul>
         </div>
     </header>
