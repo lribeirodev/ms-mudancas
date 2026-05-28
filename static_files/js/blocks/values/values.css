@@ -1,0 +1,54 @@
+.values-section {
+    display: none;
+}
+
+.our-values-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.our-values-card {
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    background-position: center;
+    background-size: cover;
+    box-shadow: var(--shadow);
+    color: #ffffff;
+}
+
+.our-values-card::before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: linear-gradient(180deg, rgba(0, 20, 51, 0.1), rgba(0, 20, 51, 0.88));
+}
+
+.our-values-card-title,
+.our-values-description {
+    position: relative;
+    z-index: 1;
+}
+
+.our-values-card-title {
+    display: block;
+    padding: 220px 24px 8px;
+    color: var(--yellow);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.our-values-description {
+    padding: 0 24px 26px;
+    color: #e2e8f0;
+}
+
+@media (max-width: 1040px) {
+    .our-values-container {
+        grid-template-columns: 1fr;
+    }
+}

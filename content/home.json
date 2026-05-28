@@ -1,0 +1,236 @@
+{
+    "site": {
+        "name": "MS Mudança",
+        "logo": "static_files/images/logo.png",
+        "phone": "(11) 98263-1867",
+        "phoneHref": "tel:+5511982631867",
+        "whatsapp": "5511982631867",
+        "copyright": "© 2026 MS Mudança - Todos os direitos reservados."
+    },
+    "header": {
+        "navigation": [
+            { "label": "Home", "href": "#home" },
+            { "label": "Serviços", "href": "#servico" },
+            { "label": "Sobre Nós", "href": "#sobre" },
+            { "label": "Depoimentos", "href": "#depoimentos" },
+            { "label": "Contato", "href": "#orcamento" }
+        ],
+        "cta": {
+            "label": "Solicitar Orçamento",
+            "href": "#orcamento"
+        }
+    },
+    "hero": {
+        "eyebrow": "Transporte e logística",
+        "title": "Sua mudança com",
+        "highlight": "segurança e eficiência",
+        "description": "Há mais de 10 anos oferecendo soluções completas em mudanças residenciais, comerciais e interestaduais.",
+        "image": "static_files/images/background-images/hero.png",
+        "buttons": [
+            { "label": "Solicitar Orçamento", "href": "#orcamento", "variant": "primary" },
+            { "label": "Nossos Serviços", "href": "#servico", "variant": "secondary" }
+        ],
+        "features": [
+            {
+                "icon": "◇",
+                "title": "Segurança",
+                "description": "Total cuidado com seus bens"
+            },
+            {
+                "icon": "♙",
+                "title": "Equipe Especializada",
+                "description": "Profissionais treinados e qualificados"
+            },
+            {
+                "icon": "▣",
+                "title": "Frota Própria",
+                "description": "Veículos modernos e equipados"
+            }
+        ]
+    },
+    "services": {
+        "eyebrow": "Nossos serviços",
+        "title": "Soluções completas para cada tipo de mudança",
+        "items": [
+            {
+                "icon": "⌂",
+                "title": "Mudança Residencial",
+                "description": "Cuidamos de cada detalhe para levar seus itens com segurança até seu novo lar.",
+                "image": "static_files/images/background-images/residencial.png",
+                "alt": "Caixas organizadas para mudança residencial",
+                "link": { "label": "Saiba mais", "href": "#orcamento" }
+            },
+            {
+                "icon": "▦",
+                "title": "Mudança Comercial",
+                "description": "Minimizamos o tempo de parada da sua empresa com agilidade e organização.",
+                "image": "static_files/images/background-images/comercial.png",
+                "alt": "Atendimento para mudança comercial",
+                "link": { "label": "Saiba mais", "href": "#orcamento" }
+            },
+            {
+                "icon": "⌖",
+                "title": "Mudança Interestadual",
+                "description": "Atendemos todo o Brasil com segurança, rastreamento e pontualidade.",
+                "image": "static_files/images/background-images/hero.png",
+                "alt": "Caminhão em estrada para mudança interestadual",
+                "link": { "label": "Saiba mais", "href": "#orcamento" }
+            },
+            {
+                "icon": "▤",
+                "title": "Guarda Móveis",
+                "description": "Espaço seguro e monitorado para armazenar seus móveis pelo tempo que precisar.",
+                "image": "static_files/images/background-images/truck-behind2.jpg",
+                "alt": "Serviço de armazenagem e guarda móveis",
+                "link": { "label": "Saiba mais", "href": "#orcamento" }
+            }
+        ]
+    },
+    "values": {
+        "eyebrow": "Sobre nós",
+        "title": "Experiência para mudar com tranquilidade",
+        "items": [
+            {
+                "title": "Segurança",
+                "image": "static_files/images/background-images/header.jpg",
+                "description": "Proteção dos seus bens desde a embalagem até a entrega."
+            },
+            {
+                "title": "Qualidade",
+                "image": "static_files/images/background-images/residencial.png",
+                "description": "Organização em cada etapa para uma mudança mais tranquila."
+            },
+            {
+                "title": "Atendimento",
+                "image": "static_files/images/background-images/comercial.png",
+                "description": "Contato próximo para orientar, tirar dúvidas e combinar detalhes."
+            }
+        ]
+    },
+    "process": {
+        "eyebrow": "Como funciona",
+        "title": "Nosso processo é simples e seguro",
+        "items": [
+            {
+                "number": "1",
+                "icon": "▤",
+                "title": "Orçamento",
+                "description": "Você solicita e recebe seu orçamento sem compromisso."
+            },
+            {
+                "number": "2",
+                "icon": "□",
+                "title": "Planejamento",
+                "description": "Planejamos cada etapa da sua mudança com você."
+            },
+            {
+                "number": "3",
+                "icon": "▰",
+                "title": "Execução",
+                "description": "Nossa equipe realiza tudo com segurança e agilidade."
+            },
+            {
+                "number": "4",
+                "icon": "⌂",
+                "title": "Entrega",
+                "description": "Entregamos e montamos tudo no local combinado."
+            }
+        ]
+    },
+    "stats": {
+        "items": [
+            { "icon": "☺", "value": "+10.000", "label": "Mudanças realizadas" },
+            { "icon": "♙", "value": "+10", "label": "Anos de experiência" },
+            { "icon": "▰", "value": "100%", "label": "Frota própria" },
+            { "icon": "◇", "value": "Seguro Total", "label": "Proteção completa" }
+        ]
+    },
+    "testimonials": {
+        "eyebrow": "Depoimentos",
+        "title": "O que nossos clientes dizem",
+        "items": [
+            {
+                "quote": "Excelente serviço! Equipe pontual, cuidadosa e muito profissional. Minha mudança foi tranquila do início ao fim.",
+                "name": "Juliana Andrade",
+                "service": "Mudança Residencial",
+                "rating": "★★★★★"
+            },
+            {
+                "quote": "Empresa séria e comprometida. Fizeram a mudança da nossa empresa sem nenhum problema.",
+                "name": "Carlos Menezes",
+                "service": "Mudança Comercial",
+                "rating": "★★★★★"
+            },
+            {
+                "quote": "Mudança interestadual realizada com perfeição. Meus móveis chegaram antes do prazo e tudo intacto.",
+                "name": "Ricardo Silva",
+                "service": "Mudança Interestadual",
+                "rating": "★★★★★"
+            }
+        ]
+    },
+    "quote": {
+        "eyebrow": "Atendimento nacional",
+        "title": "Levamos sua mudança para todo o Brasil",
+        "highlight": "todo o Brasil",
+        "description": "Atendemos rotas municipais, interestaduais e nacionais com segurança, pontualidade e cuidado em cada entrega.",
+        "background": "static_files/images/background-images/brazil-route-map.png",
+        "features": [
+            { "icon": "◇", "title": "Rastreamento", "description": "Acompanhamento em tempo real" },
+            { "icon": "▰", "title": "Frota própria", "description": "Veículos modernos e equipados" },
+            { "icon": "☏", "title": "Atendimento", "description": "Equipe pronta para orientar" }
+        ],
+        "buttons": [
+            {
+                "label": "Solicitar Orçamento",
+                "href": "https://wa.me/5511982631867?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20mudan%C3%A7a.",
+                "variant": "primary",
+                "external": true
+            },
+            {
+                "label": "Ligar agora",
+                "href": "tel:+5511982631867",
+                "variant": "secondary"
+            }
+        ]
+    },
+    "footer": {
+        "description": "Há mais de 10 anos oferecendo soluções completas em mudanças com segurança, qualidade e eficiência.",
+        "columns": [
+            {
+                "title": "Navegação",
+                "links": [
+                    { "label": "Home", "href": "#home" },
+                    { "label": "Serviços", "href": "#servico" },
+                    { "label": "Sobre Nós", "href": "#sobre" },
+                    { "label": "Depoimentos", "href": "#depoimentos" },
+                    { "label": "Contato", "href": "#orcamento" }
+                ]
+            },
+            {
+                "title": "Serviços",
+                "links": [
+                    { "label": "Mudança Residencial", "href": "#servico" },
+                    { "label": "Mudança Comercial", "href": "#servico" },
+                    { "label": "Mudança Interestadual", "href": "#servico" },
+                    { "label": "Guarda Móveis", "href": "#servico" }
+                ]
+            },
+            {
+                "title": "Contato",
+                "links": [
+                    { "label": "(11) 98263-1867", "href": "tel:+5511982631867" },
+                    { "label": "Fale pelo WhatsApp", "href": "https://wa.me/5511982631867", "external": true },
+                    { "label": "São Paulo - SP", "href": "#orcamento" }
+                ]
+            },
+            {
+                "title": "Atendimento",
+                "links": [
+                    { "label": "Segunda a Sexta: 7h às 18h", "href": "#orcamento" },
+                    { "label": "Sábado: 7h às 13h", "href": "#orcamento" }
+                ]
+            }
+        ]
+    }
+}

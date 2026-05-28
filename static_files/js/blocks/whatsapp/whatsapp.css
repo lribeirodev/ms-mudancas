@@ -1,0 +1,28 @@
+.float-button {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.28);
+    transition: transform 0.2s ease;
+}
+
+.float-button:hover {
+    transform: scale(1.07);
+}
+
+@media (max-width: 680px) {
+    .float-button {
+        right: 16px;
+        bottom: 16px;
+        width: 58px;
+        height: 58px;
+    }
+}

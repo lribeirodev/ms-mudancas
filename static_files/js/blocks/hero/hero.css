@@ -1,0 +1,121 @@
+.hero {
+    min-height: 670px;
+    display: flex;
+    align-items: center;
+    padding: 124px 0 68px;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 72% 42%, rgba(255, 194, 15, 0.22), transparent 24%),
+        linear-gradient(90deg, rgba(0, 17, 38, 0.98), rgba(0, 28, 58, 0.84) 45%, rgba(0, 0, 0, 0.18)),
+        var(--hero-image, url("../../../images/background-images/hero.png"));
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 610px;
+}
+
+.hero h1 {
+    max-width: 620px;
+    margin-bottom: 20px;
+    font-size: clamp(2.9rem, 5.6vw, 4.55rem);
+    font-weight: 900;
+    line-height: 1.02;
+}
+
+.hero h1 span {
+    color: var(--yellow);
+}
+
+.hero p {
+    max-width: 540px;
+    color: #dbe4f0;
+    font-size: 1.05rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin: 34px 0 52px;
+}
+
+.hero-features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 650px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 74px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border: 2px solid rgba(255, 255, 255, 0.82);
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.feature strong {
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.98rem;
+}
+
+.feature p {
+    color: #cbd5e1;
+    font-size: 0.86rem;
+}
+
+@media (max-width: 1040px) {
+    .hero-features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        max-width: 520px;
+    }
+}
+
+@media (max-width: 680px) {
+    .hero {
+        min-height: auto;
+        padding: 108px 0 58px;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons,
+    .feature {
+        justify-content: center;
+    }
+
+    .feature {
+        text-align: left;
+    }
+}

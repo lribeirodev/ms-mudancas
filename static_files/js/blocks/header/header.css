@@ -1,0 +1,126 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(0, 17, 38, 0.96), rgba(0, 31, 61, 0.9));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* min-height: 74px; */
+    min-height: 50px;
+    gap: 22px;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 10rem;
+    transition: transform 0.25s ease;
+}
+
+.logo-link:hover .logo {
+    transform: scale(1.03);
+}
+
+.site-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.site-menu a {
+    transition: color 0.2s ease;
+}
+
+.site-menu a:hover {
+    color: var(--yellow);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.phone-link {
+    color: #dbe4f0;
+    font-size: 0.86rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    margin: 4px auto;
+    background: #ffffff;
+}
+
+@media (max-width: 1040px) {
+    .site-menu,
+    .header-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-header.menu-open .site-menu {
+        position: absolute;
+        top: 78px;
+        left: 18px;
+        right: 18px;
+        display: grid;
+        gap: 0;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 8px;
+        background: rgba(0, 20, 51, 0.98);
+        box-shadow: var(--shadow);
+    }
+
+    .site-header.menu-open .site-menu a {
+        padding: 16px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+}
+
+@media (max-width: 680px) {
+    .navbar {
+        min-height: 70px;
+    }
+
+    .logo {
+        width: 108px;
+    }
+
+    .site-header.menu-open .site-menu {
+        top: 70px;
+    }
+}

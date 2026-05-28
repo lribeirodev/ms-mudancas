@@ -1,0 +1,64 @@
+.process-section {
+    background: var(--surface-soft);
+}
+
+.process-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+}
+
+.process-grid::before {
+    position: absolute;
+    top: 54px;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    border-top: 1px dashed #b7c4d5;
+    content: "";
+}
+
+.process-card {
+    position: relative;
+    z-index: 1;
+    padding: 34px 28px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: center;
+}
+
+.process-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 82px;
+    margin-bottom: 22px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 25%, #063d73, var(--navy-deep));
+    color: var(--yellow);
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.process-card h3 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.process-card p {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1040px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-grid::before {
+        display: none;
+    }
+}
