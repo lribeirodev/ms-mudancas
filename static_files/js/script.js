@@ -68,11 +68,27 @@ function initMobileMenu() {
     });
 }
 
+function initHeaderScroll() {
+    const siteHeader = document.querySelector(".site-header");
+
+    if (!siteHeader) {
+        return;
+    }
+
+    const updateHeaderState = () => {
+        siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+    };
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+}
+
 async function initPage() {
     try {
         const pageContent = await loadContent();
         decorateBlocks(pageContent);
         initMobileMenu();
+        initHeaderScroll();
     } catch (error) {
         console.error(error);
         document.body.insertAdjacentHTML(
