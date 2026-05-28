@@ -33,6 +33,9 @@
     margin: 18px 0 14px;
     color: #46566c;
     font-size: 0.94rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .rating {
@@ -40,6 +43,7 @@
     margin-bottom: 18px;
     color: var(--yellow-dark);
     letter-spacing: 0.06em;
+    font-size: 1.2rem;
 }
 
 .testimonial-person {
@@ -66,7 +70,9 @@
 
 .testimonial-person span {
     color: var(--muted);
-    font-size: 0.86rem;
+    font-size: 1.0rem;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 1040px) {

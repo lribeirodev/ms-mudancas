@@ -134,7 +134,7 @@
             { "icon": "☺", "value": "+10.000", "label": "Mudanças realizadas" },
             { "icon": "♙", "value": "+10", "label": "Anos de experiência" },
             { "icon": "▰", "value": "100%", "label": "Frota própria" },
-            { "icon": "◇", "value": "Seguro Total", "label": "Proteção completa" }
+            { "icon": "◇", "value": "Mudança Segura", "label": "Proteção completa" }
         ]
     },
     "testimonials": {
