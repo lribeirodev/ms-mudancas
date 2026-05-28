@@ -1,132 +1,171 @@
 const PATH_BACKGROUND = "static_files/images/background-images/";
+const PHONE_NUMBER = "11982631867";
+
 const ourValuesWrapperItems = [
     {
-        title:'Segurança',
-        image:'header.jpg',
-        description:'Prestamos pela segurança do inicio ao fim'
-    }, 
-    {
-        title:'Qualidade',
-        image:'moving-box.jpg',
-        description:'A qualidade que você merece em cada detalhe'
+        title: "Segurança",
+        image: "header.jpg",
+        description: "Proteção dos seus bens desde a embalagem até a entrega."
     },
     {
-        title:'Atendimento',
-        image:'call-center.jpg',
-        description:'Temos um atedimento diferenciado'
+        title: "Qualidade",
+        image: "moving-box.jpg",
+        description: "Organização em cada etapa para uma mudança mais tranquila."
+    },
+    {
+        title: "Atendimento",
+        image: "call-center.jpg",
+        description: "Contato próximo para orientar, tirar dúvidas e combinar detalhes."
     }
 ];
-const CEP_ORIGEM = document.getElementById('CEP_ORIGEM');
-const CEP_DESTINO = document.getElementById('CEP_DESTINO');
-const PHONE_NUMBER = '11982631867';
 
-function initServiceSection(){
-    let ourValuesWrapper = document.getElementsByClassName('our-values-container')[0];
-    ourValuesWrapperItems.forEach(item => {
-        
-        let div = document.createElement('div');
-        let title = document.createElement('span');
-        let divDesc = document.createElement('div');
-        let description = document.createElement('span');
+const CEP_ORIGEM = document.getElementById("CEP_ORIGEM");
+const CEP_DESTINO = document.getElementById("CEP_DESTINO");
+const quoteForm = document.getElementById("quote-form");
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
 
-        div.classList.add('our-values-card');
-        title.classList.add('our-values-card-title');
-        divDesc.classList.add('our-values-description');
-        divDesc.appendChild(description);
-        
-        div.style.backgroundImage = `url(${PATH_BACKGROUND}${item.image})`;
+function initValuesSection() {
+    const ourValuesWrapper = document.querySelector(".our-values-container");
+
+    if (!ourValuesWrapper) {
+        return;
+    }
+
+    ourValuesWrapper.innerHTML = "";
+
+    ourValuesWrapperItems.forEach((item) => {
+        const card = document.createElement("article");
+        const title = document.createElement("span");
+        const descriptionWrapper = document.createElement("div");
+        const description = document.createElement("p");
+
+        card.classList.add("our-values-card");
+        title.classList.add("our-values-card-title");
+        descriptionWrapper.classList.add("our-values-description");
+
+        card.style.backgroundImage = `url(${PATH_BACKGROUND}${item.image})`;
         title.innerText = item.title;
         description.innerText = item.description;
-        
-        div.appendChild(title);
-        div.appendChild(divDesc);
-        ourValuesWrapper.appendChild(div);
 
+        descriptionWrapper.appendChild(description);
+        card.appendChild(title);
+        card.appendChild(descriptionWrapper);
+        ourValuesWrapper.appendChild(card);
+    });
+}
+
+function setCepState(input, state) {
+    input.classList.toggle("field-error", state === "error");
+}
+
+function onlyNumbers(value) {
+    return value.replace(/\D/g, "").slice(0, 8);
+}
+
+function fillAddressFields(prefix, data) {
+    const uf = document.getElementById(`UF_${prefix}`);
+    const logradouro = document.getElementById(`LOGRADOURO_${prefix}`);
+    const numero = document.getElementById(`NUMERO_${prefix}`);
+
+    uf.value = data.uf || "";
+    logradouro.value = data.logradouro || "";
+    numero.focus();
+}
+
+function searchCep(input, prefix) {
+    input.value = onlyNumbers(input.value);
+
+    if (input.value.length !== 8) {
+        setCepState(input, "idle");
+        return;
+    }
+
+    fetch(`https://viacep.com.br/ws/${input.value}/json/`)
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.erro) {
+                setCepState(input, "error");
+                return;
+            }
+
+            setCepState(input, "ok");
+            fillAddressFields(prefix, data);
+        })
+        .catch(() => {
+            setCepState(input, "error");
+        });
+}
+
+function eventCepOrigem() {
+    searchCep(CEP_ORIGEM, "ORIGEM");
+}
+
+function eventCepDestino() {
+    searchCep(CEP_DESTINO, "DESTINO");
+}
+
+function sendMessage() {
+    window.open(`https://wa.me/55${PHONE_NUMBER}`, "_blank");
+}
+
+function getFormValue(form, fieldName) {
+    return form.elements[fieldName]?.value.trim() || "";
+}
+
+function buildWhatsappMessage(form) {
+    const message = [
+        "Olá, estou enviando um pedido de orçamento. Seguem meus dados:",
+        "",
+        `*NOME:* ${getFormValue(form, "NOME")}`,
+        `*TELEFONE:* ${getFormValue(form, "TELEFONE")}`,
+        `*TIPO SERVIÇO:* ${getFormValue(form, "SERVICO")}`,
+        "",
+        `*CEP ORIGEM:* ${getFormValue(form, "CEP_ORIGEM")}`,
+        `*UF:* ${getFormValue(form, "UF_ORIGEM")}`,
+        `*LOGRADOURO:* ${getFormValue(form, "LOGRADOURO_ORIGEM")}`,
+        `*NÚMERO:* ${getFormValue(form, "NUMERO_ORIGEM")}`,
+        "",
+        `*CEP DESTINO:* ${getFormValue(form, "CEP_DESTINO")}`,
+        `*UF:* ${getFormValue(form, "UF_DESTINO")}`,
+        `*LOGRADOURO:* ${getFormValue(form, "LOGRADOURO_DESTINO")}`,
+        `*NÚMERO:* ${getFormValue(form, "NUMERO_DESTINO")}`,
+        "",
+        `*OBSERVAÇÃO:* ${getFormValue(form, "OBS")}`
+    ];
+
+    return encodeURIComponent(message.join("\n"));
+}
+
+function sendMessageText(event) {
+    event?.preventDefault();
+
+    if (quoteForm && !quoteForm.reportValidity()) {
+        return;
+    }
+
+    const form = quoteForm || document.forms[0];
+    window.open(`https://wa.me/55${PHONE_NUMBER}?text=${buildWhatsappMessage(form)}`, "_blank");
+}
+
+function initMobileMenu() {
+    if (!siteHeader || !menuToggle) {
+        return;
+    }
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = siteHeader.classList.toggle("menu-open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
-}
-
-function openServico(){
-    window.open('#servico','_self');
-}
-
-function openSobre(){
-    window.open('#sobre','_self');
-}
-
-function openOrcamento(){
-    window.open('#orcamento','_self');
-}
-
-function eventCepOrigem(){
-    CEP_ORIGEM.maxLength = 8;
-    CEP_ORIGEM.type = 'number';
-    if(CEP_ORIGEM.value.length === 8){
-        fetch(`https://viacep.com.br/ws/${CEP_ORIGEM.value}/json/`)
-            .then((v) => {return v.json()})
-            .then((data) => {
-                if(data.erro){
-                    CEP_ORIGEM.style.backgroundColor = 'RED';
-                }else{
-                    CEP_ORIGEM.style.backgroundColor = '#FFFFFF';
-                    document.forms[0].elements['UF_ORIGEM'].value = data.uf;
-                    document.forms[0].elements['LOGRADOURO_ORIGEM'].value = data.logradouro;
-                    document.getElementById('NUMERO_ORIGEM').focus();
-                }
-            }).catch((error) =>{
-                CEP_ORIGEM.style.backgroundColor = 'RED';
-            });
-    }
-}
-
-function eventCepDestino(){
-    CEP_DESTINO.maxLength = 8;
-    CEP_DESTINO.type = 'number';
-    if(CEP_DESTINO.value.length === 8){
-        fetch(`https://viacep.com.br/ws/${CEP_DESTINO.value}/json/`)
-        .then((v) => {return v.json()})
-        .then((data) => {
-            if(data.erro){
-                CEP_DESTINO.style.backgroundColor = 'RED';
-            }else{
-                CEP_DESTINO.style.backgroundColor = '#FFFFFF';
-                document.forms[0].elements['UF_DESTINO'].value = data.uf;
-                document.forms[0].elements['LOGRADOURO_DESTINO'].value = data.logradouro;
-                document.getElementById('NUMERO_DESTINO').focus();
-            }
-        }).catch((error) =>{
-            CEP_DESTINO.style.backgroundColor = 'RED';
+    document.querySelectorAll(".site-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+            siteHeader.classList.remove("menu-open");
+            menuToggle.setAttribute("aria-expanded", "false");
         });
-    }
+    });
 }
 
-function sendMessage(){
-    window.open(`https://wa.me/55${PHONE_NUMBER}`);
-}
-
-function sendMessageText(){
-    
-    let form = document.forms[0];
-    let message = {
-        nome : form.elements['NOME'].value,
-        telefone : form.elements['TELEFONE'].value,
-        servico : form.elements['SERVICO'].value,
-        origem : {
-            cep : form.elements['CEP_ORIGEM'].value,
-            uf : form.elements['UF_ORIGEM'].value,
-            logradouro : form.elements['LOGRADOURO_ORIGEM'].value,
-            numero : form.elements['NUMERO_ORIGEM'].value,
-        },
-        destino : {
-            cep : form.elements['CEP_DESTINO'].value,
-            uf : form.elements['UF_DESTINO'].value,
-            logradouro : form.elements['LOGRADOURO_DESTINO'].value,
-            numero : form.elements['NUMERO_DESTINO'].value,
-        },
-        observacao : form.elements['OBS'].value
-    };
-
-    window.open(`https://wa.me/55${PHONE_NUMBER}?text=Olá estou enviando um pedido de orçamento, segue os meus dados abaixo${'%0a*NOME:* '+message.nome+'%0a*TELEFONE:* '+message.telefone+'%0a*TIPO SERVIÇO:* '+message.servico+'%0a%0a*CEP ORIGEM:* '+message.origem.cep+'%0a*UF:* '+message.origem.uf+'%0a*LOGRADOURO:* '+message.origem.logradouro+'%0a*NÚMERO:* '+message.origem.numero+'%0a%0a*CEP DESTINO:* '+message.destino.cep+'%0a*UF:* '+message.destino.uf+'%0a*LOGRADOURO:* '+message.destino.logradouro+'%0a*NÚMERO:* '+message.destino.numero+'%0a%0a*OBSERVAÇÃO:*%0a'+message.observacao}`)
-}
-
-initServiceSection();
+initValuesSection();
+initMobileMenu();
+quoteForm?.addEventListener("submit", sendMessageText);
