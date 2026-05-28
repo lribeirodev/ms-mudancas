@@ -6,8 +6,10 @@ export default function renderProcess(block, content) {
 
     content.items.forEach((item) => {
         const card = createElement("article", "process-card");
+        const img = createElement("img", "process-icon");
+        img.src = item.icon;
         card.append(
-            createElement("span", "process-icon", item.icon || item.number),
+            img,
             createElement("h3", "", `${item.number}. ${item.title}`),
             createElement("p", "", item.description)
         );

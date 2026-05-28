@@ -8,9 +8,10 @@ export default function renderServices(block, content) {
         const card = createElement("article", "service-card");
         const media = createElement("div", "service-media");
         const image = createElement("img");
-        const icon = createElement("span", "service-icon", item.icon);
+        const icon = createElement("img", "service-icon");
         const cardContent = createElement("div", "service-content");
-
+        
+        icon.src = item.icon;
         image.src = item.image;
         image.alt = item.alt || item.title;
         media.append(image, icon);

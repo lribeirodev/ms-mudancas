@@ -53,7 +53,7 @@
         "title": "Soluções completas para cada tipo de mudança",
         "items": [
             {
-                "icon": "⌂",
+                "icon": "static_files/images/background-images/icone-residencial.png",
                 "title": "Mudança Residencial",
                 "description": "Cuidamos de cada detalhe para levar seus itens com segurança até seu novo lar.",
                 "image": "static_files/images/background-images/residencial.png",
@@ -61,7 +61,7 @@
                 "link": { "label": "Saiba mais", "href": "#orcamento" }
             },
             {
-                "icon": "▦",
+                "icon": "static_files/images/background-images/icone-comercial.png",
                 "title": "Mudança Comercial",
                 "description": "Minimizamos o tempo de parada da sua empresa com agilidade e organização.",
                 "image": "static_files/images/background-images/comercial.png",
@@ -69,19 +69,11 @@
                 "link": { "label": "Saiba mais", "href": "#orcamento" }
             },
             {
-                "icon": "⌖",
+                "icon": "static_files/images/background-images/icone-interestadual.png",
                 "title": "Mudança Interestadual",
                 "description": "Atendemos todo o Brasil com segurança, rastreamento e pontualidade.",
                 "image": "static_files/images/background-images/hero.png",
                 "alt": "Caminhão em estrada para mudança interestadual",
-                "link": { "label": "Saiba mais", "href": "#orcamento" }
-            },
-            {
-                "icon": "▤",
-                "title": "Guarda Móveis",
-                "description": "Espaço seguro e monitorado para armazenar seus móveis pelo tempo que precisar.",
-                "image": "static_files/images/background-images/truck-behind2.jpg",
-                "alt": "Serviço de armazenagem e guarda móveis",
                 "link": { "label": "Saiba mais", "href": "#orcamento" }
             }
         ]
@@ -113,25 +105,25 @@
         "items": [
             {
                 "number": "1",
-                "icon": "▤",
+                "icon": "static_files/images/background-images/process/orcamento.png",
                 "title": "Orçamento",
                 "description": "Você solicita e recebe seu orçamento sem compromisso."
             },
             {
                 "number": "2",
-                "icon": "□",
+                "icon": "static_files/images/background-images/process/planejamento.png",
                 "title": "Planejamento",
                 "description": "Planejamos cada etapa da sua mudança com você."
             },
             {
                 "number": "3",
-                "icon": "▰",
+                "icon": "static_files/images/background-images/process/execucao.png",
                 "title": "Execução",
                 "description": "Nossa equipe realiza tudo com segurança e agilidade."
             },
             {
                 "number": "4",
-                "icon": "⌂",
+                "icon": "static_files/images/background-images/process/entrega.png",
                 "title": "Entrega",
                 "description": "Entregamos e montamos tudo no local combinado."
             }

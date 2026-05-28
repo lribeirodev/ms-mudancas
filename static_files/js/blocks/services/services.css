@@ -4,7 +4,7 @@
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
 
@@ -27,7 +27,7 @@
     position: relative;
 }
 
-.service-media img {
+.service-media img:not(.service-icon) {
     width: 100%;
     height: 138px;
     object-fit: cover;
@@ -84,7 +84,7 @@
 }
 
 @media (max-width: 680px) {
-    .service-card img {
+    .service-card img:not(.service-icon) {
         height: 210px;
     }
 }
