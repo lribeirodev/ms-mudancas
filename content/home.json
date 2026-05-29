@@ -5,7 +5,7 @@
         "phone": "(11) 97103-3978",
         "phoneHref": "tel:+5511971033978",
         "whatsapp": "5511971033978",
-        "copyright": "© 2026 MS Mudança - Todos os direitos reservados."
+        "copyright": "2026 © Desenvolvido por LRibeiro Digital - Todos os direitos reservados."
     },
     "header": {
         "navigation": [
@@ -204,8 +204,7 @@
                 "links": [
                     { "label": "Mudança Residencial", "href": "#servico" },
                     { "label": "Mudança Comercial", "href": "#servico" },
-                    { "label": "Mudança Interestadual", "href": "#servico" },
-                    { "label": "Guarda Móveis", "href": "#servico" }
+                    { "label": "Mudança Interestadual", "href": "#servico" }
                 ]
             },
             {
