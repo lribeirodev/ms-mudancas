@@ -16,7 +16,9 @@ export default function renderQuote(block, content) {
         const body = createElement("div");
 
         body.append(createElement("strong", "", item.title), createElement("p", "", item.description));
-        feature.append(createElement("span", "route-feature-icon", item.icon), body);
+        const img = createElement("img", "route-feature-icon");
+        img.src = item.icon;
+        feature.append(img, body);
         featureList.appendChild(feature);
     });
 

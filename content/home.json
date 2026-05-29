@@ -2,9 +2,9 @@
     "site": {
         "name": "MS Mudança",
         "logo": "assets/images/logo.png",
-        "phone": "(11) 98263-1867",
-        "phoneHref": "tel:+5511982631867",
-        "whatsapp": "5511982631867",
+        "phone": "(11) 97103-3978",
+        "phoneHref": "tel:+5511971033978",
+        "whatsapp": "5511971033978",
         "copyright": "© 2026 MS Mudança - Todos os direitos reservados."
     },
     "header": {
@@ -32,17 +32,17 @@
         ],
         "features": [
             {
-                "icon": "assets/images/hero/seguranca.png",
+                "icon": "assets/images/icones/seguranca.png",
                 "title": "Segurança",
                 "description": "Total cuidado com seus bens"
             },
             {
-                "icon": "assets/images/hero/equipe.png",
+                "icon": "assets/images/icones/equipe.png",
                 "title": "Equipe Especializada",
                 "description": "Profissionais treinados e qualificados"
             },
             {
-                "icon": "assets/images/hero/frota.png",
+                "icon": "assets/images/icones/frota.png",
                 "title": "Frota Própria",
                 "description": "Veículos modernos e equipados"
             }
@@ -53,7 +53,7 @@
         "title": "Soluções completas para cada tipo de mudança",
         "items": [
             {
-                "icon": "assets/images/icone-residencial.png",
+                "icon": "assets/images/icones/residencial.png",
                 "title": "Mudança Residencial",
                 "description": "Cuidamos de cada detalhe para levar seus itens com segurança até seu novo lar.",
                 "image": "assets/images/residencial.png",
@@ -61,7 +61,7 @@
                 "link": { "label": "Saiba mais", "href": "#orcamento" }
             },
             {
-                "icon": "assets/images/icone-comercial.png",
+                "icon": "assets/images/icones/comercial.png",
                 "title": "Mudança Comercial",
                 "description": "Minimizamos o tempo de parada da sua empresa com agilidade e organização.",
                 "image": "assets/images/comercial.png",
@@ -69,7 +69,7 @@
                 "link": { "label": "Saiba mais", "href": "#orcamento" }
             },
             {
-                "icon": "assets/images/icone-interestadual.png",
+                "icon": "assets/images/icones/interestadual.png",
                 "title": "Mudança Interestadual",
                 "description": "Atendemos todo o Brasil com segurança, rastreamento e pontualidade.",
                 "image": "assets/images/hero.png",
@@ -105,25 +105,25 @@
         "items": [
             {
                 "number": "1",
-                "icon": "assets/images/process/orcamento.png",
+                "icon": "assets/images/icones/orcamento.png",
                 "title": "Orçamento",
                 "description": "Você solicita e recebe seu orçamento sem compromisso."
             },
             {
                 "number": "2",
-                "icon": "assets/images/process/planejamento.png",
+                "icon": "assets/images/icones/planejamento.png",
                 "title": "Planejamento",
                 "description": "Planejamos cada etapa da sua mudança com você."
             },
             {
                 "number": "3",
-                "icon": "assets/images/process/execucao.png",
+                "icon": "assets/images/icones/execucao.png",
                 "title": "Execução",
                 "description": "Nossa equipe realiza tudo com segurança e agilidade."
             },
             {
                 "number": "4",
-                "icon": "assets/images/process/entrega.png",
+                "icon": "assets/images/icones/entrega.png",
                 "title": "Entrega",
                 "description": "Entregamos e montamos tudo no local combinado."
             }
@@ -168,20 +168,20 @@
         "description": "Atendemos rotas municipais, interestaduais e nacionais com segurança, pontualidade e cuidado em cada entrega.",
         "background": "assets/images/brazil-route-map.png",
         "features": [
-            { "icon": "◇", "title": "Rastreamento", "description": "Acompanhamento em tempo real" },
-            { "icon": "▰", "title": "Frota própria", "description": "Veículos modernos e equipados" },
-            { "icon": "☏", "title": "Atendimento", "description": "Equipe pronta para orientar" }
+            { "icon": "assets/images/icones/gps.png", "title": "Rastreamento", "description": "Acompanhamento em tempo real" },
+            { "icon": "assets/images/icones/frota.png", "title": "Frota própria", "description": "Veículos modernos e equipados" },
+            { "icon": "assets/images/icones/atendimento.png", "title": "Atendimento", "description": "Equipe pronta para orientar" }
         ],
         "buttons": [
             {
                 "label": "Solicitar Orçamento",
-                "href": "https://wa.me/5511982631867?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20mudan%C3%A7a.",
+                "href": "https://wa.me/5511971033978?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20mudan%C3%A7a.",
                 "variant": "primary",
                 "external": true
             },
             {
                 "label": "Ligar agora",
-                "href": "tel:+5511982631867",
+                "href": "tel:+5511971033978",
                 "variant": "secondary"
             }
         ]
@@ -211,8 +211,8 @@
             {
                 "title": "Contato",
                 "links": [
-                    { "label": "(11) 98263-1867", "href": "tel:+5511982631867" },
-                    { "label": "Fale pelo WhatsApp", "href": "https://wa.me/5511982631867", "external": true },
+                    { "label": "(11) 98263-1867", "href": "tel:+5511971033978" },
+                    { "label": "Fale pelo WhatsApp", "href": "https://wa.me/5511971033978", "external": true },
                     { "label": "São Paulo - SP", "href": "#orcamento" }
                 ]
             },

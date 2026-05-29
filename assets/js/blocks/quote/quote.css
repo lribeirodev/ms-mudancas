@@ -58,15 +58,10 @@
 }
 
 .route-feature-icon {
-    display: grid;
-    place-items: center;
-    width: 58px;
-    height: 58px;
+    width: auto;
+    height: 60px;
     border-radius: 10px;
     background: linear-gradient(135deg, #003b9a, #006dff);
-    color: #ffffff;
-    font-size: 1.55rem;
-    font-weight: 900;
     box-shadow: 0 0 24px rgba(37, 99, 235, 0.55);
 }
 
