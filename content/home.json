@@ -11,7 +11,7 @@
         "navigation": [
             { "label": "Home", "href": "#home" },
             { "label": "Serviços", "href": "#servico" },
-            { "label": "Sobre Nós", "href": "#sobre" },
+            { "label": "Como funciona", "href": "#comofunciona" },
             { "label": "Depoimentos", "href": "#depoimentos" },
             { "label": "Contato", "href": "#orcamento" }
         ],
@@ -32,17 +32,17 @@
         ],
         "features": [
             {
-                "icon": "◇",
+                "icon": "assets/images/hero/seguranca.png",
                 "title": "Segurança",
                 "description": "Total cuidado com seus bens"
             },
             {
-                "icon": "♙",
+                "icon": "assets/images/hero/equipe.png",
                 "title": "Equipe Especializada",
                 "description": "Profissionais treinados e qualificados"
             },
             {
-                "icon": "▣",
+                "icon": "assets/images/hero/frota.png",
                 "title": "Frota Própria",
                 "description": "Veículos modernos e equipados"
             }
@@ -131,10 +131,10 @@
     },
     "stats": {
         "items": [
-            { "icon": "☺", "value": "+10.000", "label": "Mudanças realizadas" },
-            { "icon": "♙", "value": "+10", "label": "Anos de experiência" },
-            { "icon": "▰", "value": "100%", "label": "Frota própria" },
-            { "icon": "◇", "value": "Mudança Segura", "label": "Proteção completa" }
+            { "icon": "", "value": "+10.000", "label": "Mudanças realizadas" },
+            { "icon": "", "value": "+10", "label": "Anos de experiência" },
+            { "icon": "", "value": "100%", "label": "Frota própria" },
+            { "icon": "", "value": "Mudança Segura", "label": "Proteção completa" }
         ]
     },
     "testimonials": {

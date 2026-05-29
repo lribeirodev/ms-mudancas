@@ -18,4 +18,5 @@ export default function renderProcess(block, content) {
 
     container.append(createSectionTitle(content), grid);
     block.appendChild(container);
+    block.id = 'comofunciona';
 }

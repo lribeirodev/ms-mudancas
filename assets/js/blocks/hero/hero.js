@@ -21,7 +21,9 @@ export default function renderHero(block, content) {
         const body = createElement("div");
 
         body.append(createElement("strong", "", item.title), createElement("p", "", item.description));
-        feature.append(createElement("span", "feature-icon", item.icon), body);
+        const img = createElement("img", "feature-icon");
+        img.src = item.icon;
+        feature.append(img, body);
         features.appendChild(feature);
     });
 
